@@ -1,0 +1,44 @@
+footer {
+    color: #ffffff;
+    background-color: #be368a;
+    font-size: large;
+}
+
+.footer_pag {
+    background-color: #be368a;
+    width: 95%;
+    height: 200px;
+    margin: 20px auto;
+
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .footer_pag .logo_pie {
+        background: #be368a;
+        margin: 0 0 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .footer_pag .datos_pie {
+        background: #be368a;
+        margin: 0 0 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .footer_pag .cont_pie {
+        background: #be368a;
+        margin: 0 0 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
