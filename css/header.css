@@ -1,6 +1,6 @@
 header {
     background-color: #ffffff;
-    font-size: 28px;
+    font-size: 25px;
     box-shadow: 0px 10px 20px -10px rgba(1,1,1,0.6);
 }
 
@@ -38,10 +38,11 @@ header {
                 text-decoration: none;
                 padding: 0 15px;
 
-                display: flex;
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                grid-gap: 10px;
                 align-items: center;
-                justify-content: center;
-                
+                justify-content: space-between;
             }
             .elemento-lista .enlace:hover {
                 color: #c9ccbe;
@@ -49,5 +50,24 @@ header {
             .enlace-activo {
                 color: white !important;
             }
+
+                /* Clase para modificar texto de un elemento, incorporar en texto */
+                .elemento-lista-text {
+                    height: 100%;
+                    list-style-type: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .elemento-lista-icon {
+                    height: 100%;
+                    list-style-type: none;
+                    font-size: 35px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
 
 

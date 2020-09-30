@@ -1,6 +1,6 @@
-@import "./normalize.css";
 @import "./icon/style.css";
 @import "./general.css";
+@import "./normalize.css";
 @import "./header.css";
 @import "./content.css";
 @import "./footer.css";
