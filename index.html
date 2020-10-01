@@ -27,33 +27,48 @@
 
 <body>
 
-  <header class="contenedor">
-    <!-- BARRA DE NAVEGACION -->
-    <nav class="navbar">
-        <div class="navbar-logo">
-          <img src="img/logo.jpeg" alt="" height="150">
-        </div>
-        <ul class="navbar-list">
-            <li class="elemento-lista"><a href="#" class="enlace">Congreso</a></li>
-            <li class="elemento-lista"><a href="#" class="enlace">Nosotros</a></li>
-            <li class="elemento-lista"><a href="#" class="enlace">Convocatoria</a></li>
-            <li class="elemento-lista"><a href="#" class="enlace">
-              <div>
-                Contacto
-              </div>
-              <div class="elemento-lista-icon">
-                <i class="icon-mcenvelop decorate_menu_icon"> </i>
-              </div>
-            </a></li>
-            <li class="elemento-lista"><a href="#" class="enlace">
-              <div>
-                Usuario
-              </div>
-              <div class="elemento-lista-icon">
-                <i class="icon-mcuser decorate_menu_icon"> </i>
-              </div>
-            </a></li>
+  <header>
+    <nav>
+      <div class="navbar">
+        <figure class="navbar-logo">
+          <img src="img/logo.jpeg" alt="", height="50px">
+        </figure>
+        <ul class="navbar-menu">
+            <a href="#" class="links">Congreso</a>
+            <a href="#" class="links">Nosotros</a>
+            <a href="#" class="links">Convocatoria</a>
+            <a href="#" class="links">
+              Contacto
+              <span class="links-icon">
+                <i class="icon-mcenvelop"> </i>
+              </span>
+            </a>
+            <a href="#" class="links">
+              Usuario
+              <span class="links-icon">
+                <i class="icon-mcuser"> </i>
+              </span>
+            </a>
         </ul>
+        <i class="icon-mcmenu menu" onclick="menu();"></i>
+      </div>
+      <div class="dropdown-menu">
+        <a href="#" class="drop-links">Congreso</a>
+        <a href="#" class="drop-links">Nosotros</a>
+        <a href="#" class="drop-links">Convocatoria</a>
+        <a href="#" class="drop-links">
+          Contacto
+          <span class="links-icon">
+            <i class="icon-mcenvelop"> </i>
+          </span>
+        </a>
+        <a href="#" class="drop-links">
+          Usuario
+          <span class="links-icon">
+            <i class="icon-mcuser"> </i>
+          </span>
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -79,9 +94,10 @@
   </footer>
 
 
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
+  <script src="js/menu-dropdown.js"></script>
+  <!--<script src="js/vendor/modernizr-3.11.2.min.js"></script>
   <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script>-->
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID.
   <script>

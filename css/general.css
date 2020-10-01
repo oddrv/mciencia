@@ -6,16 +6,12 @@ body {
     font-size: x-large;
     width: 100%;
     height: 100%;
-}   
-
-.contenedor {
-	min-width: 350px;
 }
 
-.contenedor > div,
-.contenedor .header,
-.contenedor .content,
-.contenedor .footer {
-	padding: 20px;
-	border-radius: 4px;
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }

@@ -1,73 +1,70 @@
 header {
     background-color: #ffffff;
-    font-size: 25px;
+    font-size: 15px;
     box-shadow: 0px 10px 20px -10px rgba(1,1,1,0.6);
 }
 
-.navbar {
-    width: 95%;
-    height: 200px;
-    margin: 20px auto;
-
+nav {
     display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
+    grid-template-rows: minmax(min-content, 100px);
 }
 
-    .navbar .navbar-logo{
-        margin: 0 0 0 10px;
-    }
-
-    .navbar .navbar-list{
-        height: 100%;
-        padding-left: 0;
-        margin: 0 0 0 auto;
-
+    nav .navbar {
+        width: 95%;
+        background-color: #ffffff;
         display: grid;
-        grid-template-columns: repeat(5, auto);
+        place-items: center;
+        grid-auto-flow: column;
+        align-content: space-around;
     }
-        .elemento-lista {
-            height: 100%;
-            list-style-type: none;
+
+        .navbar .menu {
+            display: none;
         }
-        
-            .elemento-lista .enlace {
-                height: inherit;
+            .menu:hover{
+                filter: opacity(50%);
+                cursor: pointer;
+                user-select: none;
+                -webkit-user-select: none;
+            }
+
+        nav .navbar .navbar-menu {
+            padding-left: 0;
+            margin: 0 0 0 auto;
+            display: grid;
+            grid-gap: 15px;
+            place-items: center;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(min-content, 40px);
+        }
+            .navbar-menu .links {
                 color: #be368a;
-                font-weight: 700;
-                text-decoration: none;
-                padding: 0 15px;
-
                 display: grid;
-                grid-template-columns: repeat(2, auto);
+                grid-auto-flow: column;
                 grid-gap: 10px;
-                align-items: center;
-                justify-content: space-between;
             }
-            .elemento-lista .enlace:hover {
-                color: #c9ccbe;
-            }
-            .enlace-activo {
-                color: white !important;
-            }
-
-                /* Clase para modificar texto de un elemento, incorporar en texto */
-                .elemento-lista-text {
-                    height: 100%;
-                    list-style-type: none;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
+                .links:hover{
+                    color: #c9ccbe;
                 }
 
-                .elemento-lista-icon {
-                    height: 100%;
-                    list-style-type: none;
-                    font-size: 35px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
+    nav .dropdown-menu {
+        display: none;
+        grid-auto-flow: row;
+        background-color: #be368a;
+        text-align: end;
+    }
+            .dropdown-menu .drop-links {
+                color: #ffffff;
+            }
 
+            .dropdown-menu .drop-links:hover{
+                background-color: #ffffff;
+                color: #be368a;
+            }
 
+/* Queries */
 
+@media only screen and (max-width: 700px) {
+    nav .navbar .menu {display: initial;}
+    nav .navbar-menu .links {display: none;}
+}
